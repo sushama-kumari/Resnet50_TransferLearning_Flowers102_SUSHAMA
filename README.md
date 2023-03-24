@@ -5,16 +5,16 @@ This python code has been written for Transfer Learning using pre-trained Resene
 CV Code Challenge requires to use a pre-trained Resnet50 and train it on Oxford Flowers102 dataset (https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 In this coding solution the kaggle Flowers-AIPND dataset has been used to obtain a structured dataset such that the total of 8189 flower-images have been divided into 
 Train, Valid and Test folders in the approx. ratio 80%, 10% and 10%, respectively.
-The images of flowers are arranged per category or, subfolders(label names) under the three folders - train (6552 images), valid(818 images), test(819 images)
+The images of flowers are arranged per category or, subfolders(label names) under the three folders - train (6552 images), valid(818 images) and test(819 images)
  
 ALGORITHM of the Transfer Learning Solution provided in this code:
 1. Fetch the total number of different categories\classes of flower images present in the dataset.
 2. Download and refer the pre-trained weights of the ResNet50 model: resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
-3. Create deep learning model 'model' using Keras Sequential API and add layers to it.
-   a) add ResNet50 pre-trained model to the sequential model
-   b) add ReLu activation unit to the sequential model
+3. Create deep learning model 'model' using Keras Sequential API from tensorflow and add layers to it.
+   a) add ResNet50 pre-trained model layer to the sequential model
+   b) add ReLu activation unit to the sequential model (effective in preventing the problem of vanishing gradient)
    c) add a dropout layer to the Sequential model, for regularization
-   d) add a dense layer with 102 classes and softmax activation function
+   d) add a dense layer with 102 classes and softmax activation function (good for multi-class classification problems)
 4. Compile the 'model'
 5. Images of flowers in Training data and Validation data are augmented and preprocessed.
 6. Batches of augmented images created using ImageDataGenerator
