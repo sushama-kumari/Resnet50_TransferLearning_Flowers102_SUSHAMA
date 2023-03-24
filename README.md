@@ -1,8 +1,8 @@
 # Resnet50_TransferLearning_Flowers102_SUSHAMA
 CONTEXT:
 
-This python code has been written for Transfer Learning using pre-trained Resenet50 to accomplish the Computer Vision Code Challenge by fellowship.AI
-CV Code Challenge requires to use a pre-trained Resnet50 and train it on Oxford Flowers102 dataset (https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+This python code has been written for Transfer Learning using pre-trained Resenet50 to accomplish the Computer Vision Code Challenge by fellowship.AI.
+The CV Code Challenge requires to use a pre-trained Resnet50 and train it on Oxford Flowers102 dataset (https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
 In this coding solution the kaggle Flowers-AIPND dataset has been used to obtain a structured dataset such that the total of 8189 flower-images have been divided into 
 Train, Valid and Test folders in the approx. ratio 80%, 10% and 10%, respectively.
 The images of flowers are arranged per category or, subfolders(label names) under the three folders - train (6552 images), valid(818 images) and test(819 images)
