@@ -8,9 +8,11 @@ Train, Valid and Test folders in the approx. ratio 80%, 10% and 10%, respectivel
 The images of flowers are arranged per category or, subfolders(label names) under the three folders - train (6552 images), valid(818 images) and test(819 images)
  
 ALGORITHM of the Transfer Learning Solution provided in this code:
-1. Fetch the total number of different categories\classes of flower images present in the dataset.
-2. Download and refer the pre-trained weights of the ResNet50 model: resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
-3. Create deep learning model 'model' using Keras Sequential API from tensorflow and add layers to it.
+1. Download the dataset (https://www.kaggle.com/datasets/tumomasire/flowersaipnd) and unzip it to a location,say, 'C:\input\flowersaipnd\' 
+2. Fetch the total number of different categories\classes of flower images present in the dataset.
+3. Download and refer the pre-trained weights of the ResNet50 model: resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
+(refer:  https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50)
+4. Create deep learning model 'model' using Keras Sequential API from tensorflow and add layers to it.
    a) add ResNet50 pre-trained model layer to the sequential model
    b) add ReLu activation unit to the sequential model (effective in preventing the problem of vanishing gradient)
    c) add a dropout layer to the Sequential model, for regularization
